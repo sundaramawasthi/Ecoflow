@@ -26,9 +26,9 @@ jobs:
         run: flutter build web --release
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v5
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build/web
-          publish_branch: gh-pages   # branch to push the web build
-          keep_files: false          # clean gh-pages branch before deploy
+          publish_branch: gh-pages
+          keep_files: false
