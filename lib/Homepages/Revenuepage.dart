@@ -3,6 +3,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+import 'ReportPage.dart';
 import 'expenseform.dart';
 import 'model/expensemodel.dart';
 
@@ -377,11 +378,33 @@ class _RevenuHomePageState extends State<RevenuHomePage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Top title
+          // Inside your return Card(...child: Column(... children: [ ... ]))
           Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: const Text(
-              "Chart Analysis",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12),
+            child: SizedBox(
+              width: double.infinity,
+              child: ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blueAccent,
+                  foregroundColor: Colors.white,
+                  elevation: 3,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  padding: const EdgeInsets.symmetric(vertical: 14),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => ReportPage()),
+                  );
+                },
+                icon: const Icon(Icons.analytics, size: 20),
+                label: const Text(
+                  "View Report",
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+              ),
             ),
           ),
 
