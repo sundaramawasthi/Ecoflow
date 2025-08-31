@@ -34,11 +34,8 @@ class HomePage extends StatelessWidget {
         elevation: 0.5,
         centerTitle: true,
         title: const Text(
-          'EcoFlow',
-          style: TextStyle(
-            color: Colors.black87,
-            fontWeight: FontWeight.w700,
-          ),
+          'ShopFlow',
+          style: TextStyle(color: Colors.black87, fontWeight: FontWeight.w700),
         ),
         actions: const [
           Padding(
@@ -59,8 +56,9 @@ class HomePage extends StatelessWidget {
             ),
             child: Center(
               child: ConstrainedBox(
-                constraints:
-                    BoxConstraints(maxWidth: isWide ? 1200 : double.infinity),
+                constraints: BoxConstraints(
+                  maxWidth: isWide ? 1200 : double.infinity,
+                ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -177,8 +175,10 @@ class HeroBanner extends StatelessWidget {
               onPressed: onStartJourney,
               child: const Text(
                 'Start Your EcoFlow Journey',
-                style:
-                    TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ),
           ),
@@ -246,7 +246,10 @@ class RevenueExpenseCard extends StatelessWidget {
         const Text(
           '\$2,450.00',
           style: TextStyle(
-              fontSize: 26, fontWeight: FontWeight.w800, color: Colors.black87),
+            fontSize: 26,
+            fontWeight: FontWeight.w800,
+            color: Colors.black87,
+          ),
         ),
         const SizedBox(height: 6),
         const Text(
@@ -260,13 +263,16 @@ class RevenueExpenseCard extends StatelessWidget {
             height: isWide ? 90 : 70,
             decoration: const BoxDecoration(
               gradient: LinearGradient(
-                  colors: [Color(0xFFBBF7D0), Color(0xFFDCFCE7)]),
+                colors: [Color(0xFFBBF7D0), Color(0xFFDCFCE7)],
+              ),
             ),
             alignment: Alignment.center,
             child: const Text(
               'Chart Preview',
-              style:
-                  TextStyle(color: Colors.black54, fontWeight: FontWeight.w600),
+              style: TextStyle(
+                color: Colors.black54,
+                fontWeight: FontWeight.w600,
+              ),
             ),
           ),
         ),
@@ -377,14 +383,16 @@ class AnimatedShopList extends StatelessWidget {
               physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               children: shopItems
-                  .map((shop) => Container(
-                        padding: const EdgeInsets.all(12),
-                        decoration: BoxDecoration(
-                          color: const Color(0xFFEFFBF4),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Center(child: Text(shop)),
-                      ))
+                  .map(
+                    (shop) => Container(
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFEFFBF4),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Center(child: Text(shop)),
+                    ),
+                  )
                   .toList(),
             )
           : ListView.separated(
@@ -418,8 +426,10 @@ class FooterAdsAndLinks extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
-            Text('© 2025 EcoFlow. All rights reserved.',
-                style: TextStyle(fontSize: 12)),
+            Text(
+              '© 2025 EcoFlow. All rights reserved.',
+              style: TextStyle(fontSize: 12),
+            ),
           ],
         ),
       ],

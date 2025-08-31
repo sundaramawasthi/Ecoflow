@@ -103,14 +103,11 @@ class _RevenuHomePageState extends State<RevenuHomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
                   Text(
-                    "EcoFlow App",
+                    "ShopFlow ",
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 4),
-                  Text(
-                    "Track your income and expenses, monitor spending patterns, and manage your budget efficiently.",
-                    style: TextStyle(fontSize: 14),
-                  ),
+                  Text("", style: TextStyle(fontSize: 14)),
                 ],
               ),
             ),
@@ -648,7 +645,7 @@ class _RevenuHomePageState extends State<RevenuHomePage> {
               child: Row(
                 children: const [
                   Text(
-                    "EcoFlow ",
+                    "ShopFlow ",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 25,
